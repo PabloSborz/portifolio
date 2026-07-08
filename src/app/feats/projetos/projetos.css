@@ -53,8 +53,7 @@ h1 {
   overflow: hidden;
   align-items: flex-end;
   background:
-    radial-gradient(circle at 80% 10%, rgba(122, 63, 232, 0.28), transparent 45%),
-    #0d0c11;
+    radial-gradient(circle at 80% 10%, rgba(122, 63, 232, 0.28), transparent 45%), #0d0c11;
 }
 
 .project-card::after {
@@ -65,7 +64,12 @@ h1 {
   height: 210px;
   border: 1px solid rgba(147, 101, 247, 0.25);
   border-radius: 50%;
-  content: "";
+  content: '';
+}
+
+.project-card-content {
+  position: relative;
+  z-index: 1;
 }
 
 .project-number {
@@ -83,12 +87,39 @@ h1 {
   font-size: 1.5rem;
 }
 
-.project-card p:last-child {
+.project-description {
   max-width: 380px;
   margin: 12px 0 0;
   color: #8f8b97;
   font-size: 0.9rem;
   line-height: 1.6;
+}
+
+.project-link {
+  display: inline-flex;
+  margin-top: 22px;
+  border-bottom: 1px solid rgba(147, 101, 247, 0.55);
+  color: #b79af9;
+  gap: 8px;
+  align-items: center;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition:
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  border-color: #c6affb;
+  color: #ffffff;
+}
+
+.project-link:focus-visible {
+  outline: 2px solid #9365f7;
+  outline-offset: 5px;
 }
 
 @media (max-width: 640px) {
