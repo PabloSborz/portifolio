@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && node ./scripts/prepare-static-build.mjs",
+    "build": "ng build",
+    "build:github-pages": "ng build --configuration production,github-pages && node ./scripts/prepare-static-build.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

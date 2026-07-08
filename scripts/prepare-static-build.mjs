@@ -1,4 +1,4 @@
-import { mkdirSync, copyFileSync, existsSync, readdirSync, statSync } from 'node:fs';
+import { copyFileSync, existsSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -7,18 +7,15 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 const distDir = path.join(rootDir, 'dist', 'portifolio-pablo');
 const browserDir = path.join(distDir, 'browser');
+const indexFile = path.join(browserDir, 'index.html');
 
-if (existsSync(browserDir)) {
-  const entries = readdirSync(browserDir);
-  for (const entry of entries) {
-    const src = path.join(browserDir, entry);
-    const dest = path.join(distDir, entry);
-    if (statSync(src).isDirectory()) {
-      mkdirSync(dest, { recursive: true });
-      continue;
-    }
-    copyFileSync(src, dest);
-  }
+if (!existsSync(indexFile)) {
+  throw new Error(`Build estatico nao encontrado em: ${indexFile}`);
 }
 
-copyFileSync(path.join(rootDir, 'public', '404.html'), path.join(distDir, '404.html'));
+// O GitHub Pages entrega 404.html para URLs acessadas diretamente. Usar a
+// mesma pagina da aplicacao permite que o Angular resolva a rota solicitada.
+copyFileSync(indexFile, path.join(browserDir, '404.html'));
+
+// Impede que o Jekyll remova arquivos gerados pelo Angular.
+writeFileSync(path.join(browserDir, '.nojekyll'), '');
