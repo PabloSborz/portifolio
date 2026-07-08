@@ -23,6 +23,6 @@ describe('Projetos', () => {
   it('should link to the published portfolio', () => {
     const link = fixture.nativeElement.querySelector('.project-link') as HTMLAnchorElement;
 
-    expect(link.href).toBe('https://pablosborz.github.io/portifolio/');
+    expect(link.href).toBe('https://pablosborz.github.io/aprendizado/');
   });
 });
