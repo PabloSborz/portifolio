@@ -1,15 +1,15 @@
 import { Routes } from '@angular/router';
 import { Home } from './feats/home/home';
-import { Contato } from './feats/contato/contato';
-import { Sobremim } from './feats/sobremim/sobremim';
-import { Projetos } from './feats/projetos/projetos';
 import { NotFound } from './feats/not-found/not-found';
 
 export const routes: Routes = [
-    {path: 'home', component: Home},
-    {path: 'sobremim', component: Sobremim},
-    {path: 'projetos', component: Projetos},
-    {path: 'contato', component: Contato},
-    {path: '', redirectTo: 'home', pathMatch: 'full'},
-    {path: '**', component: NotFound},
+  { path: '', component: Home, title: 'Pablo Sborz | Portfólio' },
+  { path: 'home', redirectTo: '', pathMatch: 'full' },
+  { path: 'inicio', redirectTo: '', pathMatch: 'full' },
+  { path: 'sobre', redirectTo: '', pathMatch: 'full' },
+  { path: 'sobremim', redirectTo: '', pathMatch: 'full' },
+  { path: 'projetos', redirectTo: '', pathMatch: 'full' },
+  { path: 'processo', redirectTo: '', pathMatch: 'full' },
+  { path: 'contato', redirectTo: '', pathMatch: 'full' },
+  { path: '**', component: NotFound, title: 'Página não encontrada | Pablo Sborz' },
 ];

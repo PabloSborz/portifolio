@@ -1,26 +1,108 @@
-<section class="hero" aria-labelledby="hero-title">
+<section id="inicio" class="hero" aria-labelledby="hero-title" appScrollReveal>
   <div class="hero-copy">
-    <p class="eyebrow">Olá, eu sou</p>
-    <h1 id="hero-title">Pablo Sborz</h1>
-    <p class="role">Desenvolvedor Front-end</p>
+    <p class="eyebrow">Portfólio front-end</p>
+    <h1 id="hero-title">
+      Desenvolvedor
+      <span>Front-end</span>
+    </h1>
+    <p class="role">Interfaces modernas, responsivas e prontas para virar produto.</p>
     <p class="description">
-      Desenvolvedor front-end apaixonado por criar experiências digitais modernas,
-      funcionais e com foco no usuário.
+      Eu crio experiências digitais com Angular, TypeScript e CSS bem estruturado,
+      unindo visual marcante, navegação simples e código organizado.
     </p>
 
     <div class="hero-actions">
-      <a class="primary-action" routerLink="/projetos">Ver Projetos</a>
-      <a class="secondary-action" routerLink="/sobremim">
-        Sobre mim
-        <span aria-hidden="true">›</span>
+      <a class="primary-action" href="#projetos">Ver projetos</a>
+      <a class="secondary-action" href="#contato">
+        Vamos conversar
+        <span aria-hidden="true">+</span>
       </a>
     </div>
   </div>
 
-  <div class="portrait-area" aria-hidden="true">
-    <div class="orbit orbit-one"></div>
-    <div class="orbit orbit-two"></div>
-    <div class="portrait-glow"></div>
-    <img src="perfil-hero.png" alt="" />
+  <div class="portrait-stage" aria-label="Retrato de Pablo Sborz">
+    <div class="portrait-frame">
+      <div class="portrait-window-bar" aria-hidden="true">
+        <div class="window-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span class="portrait-window-title">perfil-pablo.jpg</span>
+      </div>
+      <div class="portrait-photo-wrap">
+        <img src="perfil-hero.png" alt="Pablo Sborz" />
+      </div>
+      <div class="portrait-stamp" aria-hidden="true">
+        <svg viewBox="0 0 140 140">
+          <defs>
+            <path id="hero-stamp-path" d="M70 70 m -50 0 a 50 50 0 1 1 100 0 a 50 50 0 1 1 -100 0" />
+          </defs>
+          <circle class="stamp-ring" cx="70" cy="70" r="50"></circle>
+          <text>
+            <textPath href="#hero-stamp-path">FRONT-END • ANGULAR • UI • </textPath>
+          </text>
+        </svg>
+        <span></span>
+      </div>
+    </div>
+    <div class="availability-card">
+      <span aria-hidden="true"></span>
+      <strong>Disponível para oportunidades</strong>
+    </div>
   </div>
 </section>
+
+<section class="stack-strip" aria-label="Tecnologias em carrossel" appScrollReveal appScrollRevealDelay="80ms">
+  <div class="stack-track">
+    <div class="stack-group">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>TypeScript</span>
+      <span>Angular</span>
+      <span>Responsivo</span>
+    </div>
+    <div class="stack-group" aria-hidden="true">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>TypeScript</span>
+      <span>Angular</span>
+      <span>Responsivo</span>
+    </div>
+  </div>
+</section>
+
+<app-sobremim></app-sobremim>
+
+<section class="services-section" aria-labelledby="services-title">
+  <div class="section-heading" appScrollReveal>
+    <p class="eyebrow">O que eu entrego</p>
+    <h2 id="services-title">Design de interface com base técnica.</h2>
+  </div>
+
+  <div class="services-grid">
+    <article appScrollReveal appScrollRevealDelay="80ms">
+      <span>01</span>
+      <h3>Interfaces</h3>
+      <p>Telas limpas, consistentes e com hierarquia visual forte para guiar cada ação.</p>
+    </article>
+    <article appScrollReveal appScrollRevealDelay="150ms">
+      <span>02</span>
+      <h3>Front-end</h3>
+      <p>Componentes em Angular com TypeScript, organização e atenção ao comportamento real.</p>
+    </article>
+    <article appScrollReveal appScrollRevealDelay="220ms">
+      <span>03</span>
+      <h3>Experiência</h3>
+      <p>Layouts responsivos, acessíveis e preparados para funcionar bem em diferentes telas.</p>
+    </article>
+  </div>
+</section>
+
+<app-projetos></app-projetos>
+
+<app-processo></app-processo>
+
+<app-contato></app-contato>

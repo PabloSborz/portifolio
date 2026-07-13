@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-processo',
   imports: [ScrollRevealDirective],
-  templateUrl: './footer.html',
-  styleUrl: './footer.css',
+  templateUrl: './processo.html',
+  styleUrl: './processo.css',
 })
-export class Footer {}
+export class Processo {}

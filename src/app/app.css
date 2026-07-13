@@ -1,6 +1,6 @@
 :host {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
   min-height: 100vh;
   min-height: 100dvh;
   isolation: isolate;
@@ -9,4 +9,17 @@
 .page-content {
   display: block;
   min-height: 0;
+  padding-top: 96px;
+}
+
+@media (max-width: 820px) {
+  .page-content {
+    padding-top: 142px;
+  }
+}
+
+@media (max-width: 560px) {
+  .page-content {
+    padding-top: 138px;
+  }
 }

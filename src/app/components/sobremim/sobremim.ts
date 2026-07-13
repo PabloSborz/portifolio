@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
 
 @Component({
   selector: 'app-sobremim',
-  imports: [RouterLink],
+  imports: [ScrollRevealDirective],
   templateUrl: './sobremim.html',
   styleUrl: './sobremim.css',
 })

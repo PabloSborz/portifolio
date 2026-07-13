@@ -1,10 +1,22 @@
 <header class="site-header" aria-label="Cabeçalho principal">
-  <a class="brand" routerLink="/home" aria-label="Ir para o início">PABLO<span>.</span></a>
+  <a class="brand" href="#inicio" aria-label="Ir para o início">
+    <span class="brand-mark">PS</span>
+    <span class="brand-copy">
+      <strong>Pablo Sborz</strong>
+      <small>Front-end Developer</small>
+    </span>
+  </a>
 
   <nav class="navigation" aria-label="Navegação principal">
-    <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Início</a>
-    <a routerLink="/sobremim" routerLinkActive="active">Sobre</a>
-    <a routerLink="/projetos" routerLinkActive="active">Projetos</a>
-    <a routerLink="/contato" routerLinkActive="active">Contato</a>
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#processo">Processo</a>
+    <a href="#contato">Contato</a>
   </nav>
+
+  <a class="header-cta" href="#contato">
+    <span aria-hidden="true"></span>
+    Disponível
+  </a>
 </header>

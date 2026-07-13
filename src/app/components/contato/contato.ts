@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { ScrollRevealDirective } from '../../shared/scroll-reveal.directive';
 
 @Component({
   selector: 'app-contato',
-  imports: [],
+  imports: [ScrollRevealDirective],
   templateUrl: './contato.html',
   styleUrl: './contato.css',
 })
