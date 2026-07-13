@@ -95,21 +95,28 @@ h2 {
 @media (max-width: 700px) {
   .process-section {
     width: var(--site-width);
-    padding: 68px 0;
+    padding: 58px 0;
+    scroll-margin-top: 132px;
   }
 
   h2 {
-    font-size: 2.8rem;
+    font-size: 2.55rem;
   }
 
   .process-list article {
+    min-height: 0;
+    padding: 22px 0;
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 10px;
   }
 }
 
 @media (max-width: 460px) {
   h2 {
-    font-size: 2.2rem;
+    font-size: 2.05rem;
+  }
+
+  .process-list h3 {
+    font-size: 1.18rem;
   }
 }

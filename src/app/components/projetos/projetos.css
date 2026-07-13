@@ -226,27 +226,71 @@ h1 {
   .projects-page {
     width: var(--site-width);
     padding: 54px 0 76px;
+    scroll-margin-top: 132px;
   }
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 3.05rem;
   }
 
   .project-content {
     padding: 24px;
   }
+
+  .project-card {
+    min-height: 0;
+  }
+
+  .project-media {
+    min-height: 260px;
+  }
+
+  .screen-top,
+  .screen-block {
+    right: 24px;
+    left: 24px;
+  }
+
+  .block-two {
+    right: 20%;
+  }
+
+  .block-three {
+    left: 20%;
+  }
 }
 
 @media (max-width: 430px) {
   h1 {
-    font-size: 2.75rem;
+    font-size: 2.35rem;
   }
 
   .project-card h2 {
-    font-size: 2rem;
+    font-size: 1.72rem;
   }
 
   .project-media {
-    min-height: 280px;
+    min-height: 220px;
+  }
+
+  .screen-top {
+    top: 32px;
+    height: 38px;
+  }
+
+  .screen-block {
+    height: 46px;
+  }
+
+  .block-one {
+    top: 106px;
+  }
+
+  .block-two {
+    top: 168px;
+  }
+
+  .block-three {
+    top: 170px;
   }
 }

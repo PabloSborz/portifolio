@@ -68,6 +68,31 @@ body {
   }
 }
 
+@media (max-width: 560px) {
+  :root {
+    --page-gutter: 28px;
+  }
+
+  html {
+    scroll-padding-top: 132px;
+  }
+
+  body {
+    background-size:
+      56px 56px,
+      56px 56px,
+      auto,
+      auto,
+      auto;
+  }
+}
+
+@media (max-width: 380px) {
+  :root {
+    --page-gutter: 24px;
+  }
+}
+
 body::before {
   position: fixed;
   z-index: -2;
@@ -685,10 +710,16 @@ img {
 
   .portrait-window-bar {
     height: 38px;
+    padding-inline: 14px;
   }
 
   .portrait-stamp {
     display: none;
+  }
+
+  .window-dots span {
+    width: 9px;
+    height: 9px;
   }
 }
 

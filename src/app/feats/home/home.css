@@ -357,11 +357,13 @@ h2 {
 
   .hero {
     min-height: 0;
-    padding: 54px 0 74px;
+    padding: 38px 0 68px;
+    scroll-margin-top: 132px;
+    gap: 32px;
   }
 
   h1 {
-    font-size: 4.4rem;
+    font-size: 3.65rem;
   }
 
   h2 {
@@ -374,6 +376,12 @@ h2 {
 
   .portrait-stage {
     min-height: 0;
+  }
+
+  .availability-card {
+    right: 18px;
+    bottom: 18px;
+    min-height: 62px;
   }
 
   .stack-track {
@@ -397,15 +405,25 @@ h2 {
 
 @media (max-width: 460px) {
   h1 {
-    font-size: 3.25rem;
+    font-size: 2.75rem;
   }
 
   h2 {
     font-size: 2.2rem;
   }
 
+  .hero-actions {
+    gap: 10px;
+  }
+
+  .hero-actions a {
+    width: 100%;
+  }
+
   .portrait-stage {
+    display: grid;
     min-height: 0;
+    gap: 12px;
   }
 
   .portrait-frame {
@@ -413,7 +431,14 @@ h2 {
   }
 
   .portrait-photo-wrap {
-    height: 376px;
+    height: 310px;
+  }
+
+  .availability-card {
+    position: static;
+    width: 100%;
+    min-height: 58px;
+    padding: 14px 16px;
   }
 
   .portrait-stamp {

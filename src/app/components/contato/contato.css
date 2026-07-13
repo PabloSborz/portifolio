@@ -201,10 +201,12 @@ h1 span {
     width: var(--site-width);
     min-height: 0;
     padding: 54px 0 76px;
+    scroll-margin-top: 132px;
+    gap: 32px;
   }
 
   h1 {
-    font-size: 3.45rem;
+    font-size: 3rem;
   }
 
   .panel-content {
@@ -214,11 +216,22 @@ h1 span {
 
 @media (max-width: 430px) {
   h1 {
-    font-size: 2.75rem;
+    font-size: 2.36rem;
   }
 
   .contact-list a {
+    min-height: 76px;
+    gap: 12px;
     grid-template-columns: auto 1fr;
+  }
+
+  .icon-box {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact-info strong {
+    font-size: 0.92rem;
   }
 
   .arrow {
